@@ -1,0 +1,5 @@
+<h1>Articles of your choice</h1>
+
+<h3><%= @article.title %> (id: <%= @article.id %>)</h3>
+<p>content: <%= @article.content %> </p>
+<p><%= link_to "edit", edit_article_path(@article) %></p>

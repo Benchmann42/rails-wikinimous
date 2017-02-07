@@ -1,0 +1,12 @@
+<h1>Articles list</h1>
+<div>
+  <% @articles.each do |a| %>
+    <h3><%= a.title %> (id: <%=a.id %>)</h3>
+    <p>content: <%= a.content %> </p>
+    <%= link_to "view", article_path(a) %>
+    <%= link_to "delete", article_path(a), method: :delete, data: { confirm: "Are you sure?" }
+    %>
+  <% end %>
+</div>
+</br>
+<div ><%= link_to "Add a new article", new_article_path %></div>
